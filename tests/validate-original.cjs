@@ -1,0 +1,6 @@
+const X=require('../dist/vendor/xlsx.full.min.js'),{match}=require('../dist/engine.js'),fs=require('fs');
+const rows=p=>{const b=X.read(fs.readFileSync(p),{type:'buffer'});return X.utils.sheet_to_json(b.Sheets[b.SheetNames[0]]);};
+try {
+const mods=rows('../Modification_List.xlsx').map((r,i)=>({row:i+2,name:r['Modified Type'],mass:r['m/z'],formula:r['Neutral Loss']}));
+const report={};for(const mode of ['Positive','Negative']){const f=rows('../'+mode+'.xlsx').map((r,i)=>({row:i+2,id:r.NO,name:r.Name,mz:r['m/z'],rt:r['RT [min]']}));const r=match(f,mods);const old=rows('../'+(mode==='Positive'?'Pos':'Neg')+'-统计结果-10ppm-除以'+(mode==='Positive'?'pos':'neg')+'MS1.xlsx');const key=(s,u,m)=>JSON.stringify([s,u,m]);const keys=new Set(r.results.map(x=>key(x.Substrate_NO,x.Unknown_NO,x.Modification_Type)));const oldUnknown=old.filter(x=>!String(x[mode+'_Name']??'').trim());report[mode]={...r.stats,candidates:r.results.length,historical_rows:old.length,historical_unknown_rows:oldUnknown.length,historical_unknown_matched:oldUnknown.filter(x=>keys.has(key(x.Substrate_NO,x[mode+'_NO'],x.Modification_Type))).length,historical_named_targets:old.length-oldUnknown.length};}fs.writeFileSync('validation.json',JSON.stringify(report,null,2));console.log(report);
+}catch(e){console.error(e.message);process.exitCode=1;}

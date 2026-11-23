@@ -1,0 +1,47 @@
+{
+  "version": "v1.0",
+  "date": "2026-11-23",
+  "tests": [
+    {
+      "protocol": "file",
+      "id": "positive",
+      "format": "xlsx",
+      "candidates": 16719,
+      "signature": "6510108cf676a95d058064eeb52a04f7a46c7ef14b0ad956a5d80d3fd810849d",
+      "status": "passed"
+    },
+    {
+      "protocol": "file",
+      "id": "negative",
+      "format": "csv",
+      "candidates": 9187,
+      "signature": "cade01329403cc882fb3edeec9ac7c10022d5b421210df055fe4c7b0a4803bda",
+      "status": "passed"
+    },
+    {
+      "protocol": "http",
+      "id": "positive",
+      "format": "csv",
+      "candidates": 16719,
+      "signature": "6510108cf676a95d058064eeb52a04f7a46c7ef14b0ad956a5d80d3fd810849d",
+      "status": "passed"
+    },
+    {
+      "protocol": "http",
+      "id": "negative",
+      "format": "xlsx",
+      "candidates": 9187,
+      "signature": "cade01329403cc882fb3edeec9ac7c10022d5b421210df055fe4c7b0a4803bda",
+      "status": "passed"
+    }
+  ],
+  "sample_integrity": "All original XLSX copies and all downloadable CSV hashes verified",
+  "browser": "Chromium on Linux",
+  "limits": "file:// tested in Linux Chromium; no physical Windows host used",
+  "fallback": "passed",
+  "visual_review": [
+    "desktop input",
+    "desktop results",
+    "mobile results"
+  ]
+}

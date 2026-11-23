@@ -1,0 +1,67 @@
+﻿Modified Type,Neutral Loss,m/z
+Dehydrogenation,H2,2.0157
+N-ethyl-2-pyrrolidinone-substitution,C6H9NO,111.0684
+Galloylation,C7H4O4,152.011
+Hydroxylation,O,15.9949
+Degalloylation,C7H4O4,152.011
+Methylation,CH2,14.0157
+Hydroxylation,H2O,18.0106
+Methoxylation,CH2O,30.0106
+Methyl ammonia,CH3NH2,31.0417
+Acetylation,CH2CO,42.0106
+Carboxylation,COO,43.9893
+Isoprenylation,C5H8,68.0626
+Glycerol,C3H6O2,74.0368
+Sulfation,SO3,79.9568
+Malonyl,C3H2O3,85.9999
+Glyceric acid coupling,C3H4O3,88.016
+Putrescine,C4H12N2,88.0995
+Quinol,C6H4O,92.0262
+Cadaverine,C5H14N2,102.1157
+Hydroxybenzyl alcohol,C7H6O,106.0419
+Hydroxyquinol,C6H4O2,108.0211
+Malate,C4H4O4,116.011
+Phenylacetyl coupling,C8H6O,118.0419
+Hydroxybenzoate,C7H4O2,120.0211
+p-Hydroxybenzoylation,C7H6O2,122.0368
+Agmatine,C5H14N4,130.1213
+Tartarate,C4H4O5,132.0059
+Pentosylation,C5H8O4,132.0423
+Coumaryl alcohol,C9H8O,132.0575
+Dihydroxybenzoic acid coupling,C7H4O3,136.016
+Vanillyl alcohol,C8H8O2,136.0524
+Tyramine,C8H11NO,137.0835
+Hydroxyadipic acid coupling,C6H8O4,144.0423
+Spermidine,C7H19N3,145.1574
+Coumaryl,C9H6O2,146.0362
+Deoxyhexosylation,C6H10O4,146.0574
+Caffeyl alcohol,C9H8O2,148.0524
+Vanillate,C8H6O3,150.0317
+Non-condensed Coumaryl alcohol,C9H10O2,150.0681
+Dimethoxyquinol,C8H8O3,152.0473
+Octopamine/Dopamine,C8H11NO2,153.0784
+3-Dehydroshikimic acid coupling,C7H6O4,154.0266
+Non-condensed Vanillyl alcohol,C8H10O3,154.063
+Shikimic acid coupling,C7H8O4,156.0423
+Tryptamine,C10H12N2,160.1
+Caffeoyl,C9H6O3,162.0312
+Hexosylation,C6H10O5,162.0528
+Coniferyl alcohol,C10H10O2,162.0681
+Non-condensed Caffeyl alcohol,C9H10O3,166.063
+Syringyl alcohol,C9H10O3,166.063
+3-methoxytyramine,C9H13NO2,167.0946
+Noradrenaline,C8H11NO3,169.0733
+Quinic acid coupling,C7H10O5,174.0528
+Feruloyl,C10H8O3,176.0468
+Serotonin,C10H12N2O,176.095
+5-OH-feruloyl alcohol,C10H10O3,178.063
+Syringate,C9H8O4,180.0423
+Non-condensed Coniferyl alcohol,C10H12O3,180.0786
+3'-methoxyoctopamine,C9H13NO3,183.0895
+5-methoxytryptamine,C11H14N2O,190.1106
+5-OH-Feruloyl,C10H8O4,192.0423
+Sinapyl alcohol,C11H12O3,192.0786
+Non-condensed 5-OH-feruloyl alcohol,C10H12O4,196.0736
+Spermine,C10H26N4,202.2152
+Sinapyl,C11H10O4,206.0574
+Non-condensed Sinapyl alcohol,C11H14O4,210.0892

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metabolite Modification Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="vendor/xlsx.full.min.js"></script>
+  <script defer src="engine.js"></script>
+  <script defer src="runner.js"></script>
+  <script defer src="examples.js"></script>
+  <script defer src="example-utils.js"></script>
+  <script defer src="example-loader.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header><div class="header-inner"><a class="brand" href="index.html">Metabolite Modification Finder</a><span class="version">v1.0</span></div></header>
+  <main>
+    <section class="intro">
+      <h1>Discover possible modified metabolites</h1>
+      <p>Connect unknown features to known substrates using modification list. Upload your tables, define a tolerance, and explore candidate matches.</p>
+    </section>
+    <section class="input-section" aria-label="Analysis inputs">
+      <div class="input-grid">
+        <section class="input-panel" aria-labelledby="feature-title">
+          <h2 id="feature-title">Feature table</h2>
+          <p class="hint">Name, m/z, optional NO and RT</p>
+          <label class="file-label" for="features">Choose a file <span>XLSX / XLS / CSV</span></label>
+          <input id="features" type="file" accept=".xlsx,.xls,.csv">
+          <div class="example-picker">
+            <div class="example-selects"><select id="features-example" aria-label="Feature example"><option value="positive">Positive ion</option><option value="negative">Negative ion</option></select><select id="features-format" aria-label="Feature example format"><option value="xlsx">XLSX</option><option value="csv">CSV</option></select></div>
+            <div class="example-actions"><button id="example-features" type="button">Load example</button><a id="download-features" href="examples/Positive.xlsx" download>Download example</a></div>
+          </div>
+          <p id="features-info" class="file-info" aria-live="polite"></p>
+          <details id="features-details" hidden><summary>Column mapping</summary><div id="featureMap" class="column-map"></div></details>
+        </section>
+        <section class="input-panel" aria-labelledby="mod-title">
+          <h2 id="mod-title">Modification library</h2>
+          <p class="hint">Modification name, mass difference, optional formula</p>
+          <label class="file-label" for="mods">Choose a file <span>XLSX / XLS / CSV</span></label>
+          <input id="mods" type="file" accept=".xlsx,.xls,.csv">
+          <div class="example-picker">
+            <div class="example-selects"><select id="mods-example" aria-label="Modification example"><option value="modifications">Modification_List</option></select><select id="mods-format" aria-label="Modification example format"><option value="xlsx">XLSX</option><option value="csv">CSV</option></select></div>
+            <div class="example-actions"><button id="example-mods" type="button">Load example</button><a id="download-mods" href="examples/Modification_List.xlsx" download>Download example</a></div>
+          </div>
+          <p id="mods-info" class="file-info" aria-live="polite"></p>
+          <details id="mods-details" hidden><summary>Column mapping</summary><div id="modMap" class="column-map"></div></details>
+        </section>
+      </div>
+      <div class="parameters">
+        <label for="ppm">Mass tolerance (ppm)<input id="ppm" type="number" min="0.000001" max="999999" step="any" value="10"></label>
+        <label for="direction">Search direction<select id="direction"><option value="both">Addition & subtraction</option><option value="+">Addition only (+)</option><option value="-">Subtraction only (−)</option></select></label>
+        <button id="run" type="button" class="primary">Find candidate matches</button>
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </section>
+    <section id="results" hidden aria-label="Analysis results">
+      <div class="results-heading"><h2>Results</h2><span id="runLabel"></span><div class="export-actions"><button id="csv" disabled>Export CSV</button><button id="export" disabled>Export XLSX</button></div></div>
+      <div class="metrics"><div><strong id="count">—</strong><span>Candidate matches</span></div><div><strong id="coverage">—</strong><span>Unknowns matched</span></div><div><strong id="known">—</strong><span>Known substrates</span></div></div>
+      <div class="filters"><input id="search" type="search" placeholder="Search substrate, feature ID, or modification" aria-label="Search results"><select id="filterDir" aria-label="Filter direction"><option value="both">All directions</option><option value="+">Addition only (+)</option><option value="-">Subtraction only (−)</option></select></div>
+      <div class="table-scroll"><table><thead><tr><th>Unknown ID</th><th>Observed m/z</th><th>Substrate</th><th>Modification</th><th>Direction</th><th>ppm error</th></tr></thead><tbody id="rows"></tbody></table></div>
+      <div class="table-bottom"><p id="tableInfo">Exports include all candidates.</p><div class="pagination"><button id="prev" disabled>Previous</button><span id="page"></span><button id="next" disabled>Next</button></div></div>
+      <div class="charts"><section><h3>Modification frequency</h3><p class="hint">Top 8 modifications · candidate count</p><div id="bars" class="chart"></div></section><section><h3>Mass error distribution</h3><p class="hint">Signed ppm error · all candidates</p><div id="hist" class="chart"></div></section></div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "metabolite-modification-finder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "start": "python3 -m http.server 8080 --directory dist"
+  }
+}

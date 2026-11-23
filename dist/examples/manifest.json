@@ -1,0 +1,94 @@
+{
+  "positive": {
+    "label": "Positive ion",
+    "stem": "Positive",
+    "rows": 5462,
+    "columns": 189,
+    "sheet": "Sheet1",
+    "chunks": [
+      "examples/positive.part-00.js",
+      "examples/positive.part-01.js",
+      "examples/positive.part-02.js",
+      "examples/positive.part-03.js",
+      "examples/positive.part-04.js",
+      "examples/positive.part-05.js",
+      "examples/positive.part-06.js",
+      "examples/positive.part-07.js",
+      "examples/positive.part-08.js",
+      "examples/positive.part-09.js",
+      "examples/positive.part-10.js",
+      "examples/positive.part-11.js",
+      "examples/positive.part-12.js",
+      "examples/positive.part-13.js"
+    ],
+    "xlsx": {
+      "url": "examples/Positive.xlsx",
+      "bytes": 14324258,
+      "sha256": "59bcfdf5c3f976003e1930bda9f50b9e00ae46dfde86d0006cd754a828dd927b"
+    },
+    "csv": {
+      "url": "examples/Positive.csv",
+      "bytes": 17093719,
+      "sha256": "1bf24194274f1b12a1243ab8d7dbdfa2ad4774324c32b253a62e047c360ffb8a"
+    }
+  },
+  "negative": {
+    "label": "Negative ion",
+    "stem": "Negative",
+    "rows": 7909,
+    "columns": 188,
+    "sheet": "Sheet1",
+    "chunks": [
+      "examples/negative.part-00.js",
+      "examples/negative.part-01.js",
+      "examples/negative.part-02.js",
+      "examples/negative.part-03.js",
+      "examples/negative.part-04.js",
+      "examples/negative.part-05.js",
+      "examples/negative.part-06.js",
+      "examples/negative.part-07.js",
+      "examples/negative.part-08.js",
+      "examples/negative.part-09.js",
+      "examples/negative.part-10.js",
+      "examples/negative.part-11.js",
+      "examples/negative.part-12.js",
+      "examples/negative.part-13.js",
+      "examples/negative.part-14.js",
+      "examples/negative.part-15.js",
+      "examples/negative.part-16.js",
+      "examples/negative.part-17.js",
+      "examples/negative.part-18.js",
+      "examples/negative.part-19.js"
+    ],
+    "xlsx": {
+      "url": "examples/Negative.xlsx",
+      "bytes": 20854997,
+      "sha256": "b67d4b8d8e972f92cee210154d9a3703be36cb28fb19000f50f9d50e98df2089"
+    },
+    "csv": {
+      "url": "examples/Negative.csv",
+      "bytes": 24645542,
+      "sha256": "f219e438a250c68cb4e5056f0246d3499fe0e6792dcedd1013b6d18ca0e6ed60"
+    }
+  },
+  "modifications": {
+    "label": "Modification list",
+    "stem": "Modification_List",
+    "rows": 66,
+    "columns": 3,
+    "sheet": "Sheet1",
+    "chunks": [
+      "examples/modifications.part-00.js"
+    ],
+    "xlsx": {
+      "url": "examples/Modification_List.xlsx",
+      "bytes": 11275,
+      "sha256": "ca41691ead36ddec5f0c5371f07398621b3e38992a1c2fbdc47260b94be1a130"
+    },
+    "csv": {
+      "url": "examples/Modification_List.csv",
+      "bytes": 2189,
+      "sha256": "923aac9567d06128ab02cd4269ea28256fd5af536e318ded8c70f24edde9d249"
+    }
+  }
+}

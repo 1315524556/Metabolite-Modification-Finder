@@ -1,0 +1,24 @@
+{
+  "Positive": {
+    "substrates": 555,
+    "unknowns": 4907,
+    "modifications": 66,
+    "matched": 2726,
+    "candidates": 16719,
+    "historical_rows": 198,
+    "historical_unknown_rows": 163,
+    "historical_unknown_matched": 132,
+    "historical_named_targets": 35
+  },
+  "Negative": {
+    "substrates": 71,
+    "unknowns": 7838,
+    "modifications": 66,
+    "matched": 2817,
+    "candidates": 9187,
+    "historical_rows": 768,
+    "historical_unknown_rows": 731,
+    "historical_unknown_matched": 584,
+    "historical_named_targets": 37
+  }
+}
